@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="text-center">
+ <img src={{loginImage}} >
+</div>
+</div>
+
+<div class="container">
+    <form>
+        <hr/>
+        <div class="formgroup" >
+            <label>EMAIL</label>
+            <input type="email" [(ngModel)]="loginuserdata.email" required  class="form-control" name="email" >
+          </div>
+        <div class="formgroup">
+          <label>PASSWORD</label>
+          <input type="password" required [(ngModel)]="loginuserdata.password" class="form-control" name="password">
+        </div>
+                
+       <br/>
+        <button (click)="loginUser()" class="btn btn-primary btn-block" type="submit">Login</button>
+     </form>
+</div>

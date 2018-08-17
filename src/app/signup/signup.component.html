@@ -1,0 +1,48 @@
+<div class="container">
+<form #userRegistrationForm="ngForm" (ngSubmit)="onSubmit(userRegistrationForm)">
+<div class="formgroup">
+    <label>USERNAME</label>
+    <input type="text" #userName="ngModel" [(ngModel)]="user.userName" required class="form-control" name="userName">
+  </div>
+  <div class="formgroup">
+      <label>FIRSTNAME</label>
+      <input type="text" #FirstName="ngModel" [(ngModel)]="user.FirstName" required class="form-control" name="FirstName">
+    </div>
+    <div class="formgroup">
+        <label>LASTNAME</label>
+        <input type="text" #LastName="ngModel" [(ngModel)]="user.LastName" required class="form-control" name="LastName">
+      </div>
+      <div class="formgroup">
+          <label>EMAIL</label>
+          <input type="email" #Email="ngModel" [(ngModel)]="user.Email" required class="form-control" name="Email">
+        </div>
+      <div class="formgroup">
+            <label>PASSWORD</label>
+            <input type="password" #password="ngModel" [(ngModel)]="user.password" required class="form-control" name="password">
+          </div>
+  <div class="formgroup">
+    <label>PHONE</label>
+    <input type="tel" class="form-control" #phone="ngModel" [(ngModel)]="user.phone" required pattern="^\d{10}$" name="phone">
+  </div>
+  <br/>
+  <!--<div class="row">
+    <legend class="col-form-label col-sm-2 pt-0">GENDER</legend>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" [(ngModel)]="registerUserData.gridRadios" type="radio" name="gridRadios" id="gridRadios1" value="male" checked>
+        <label class="form-check-label" for="gridRadios1">
+          MALE
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" [(ngModel)]="registerUserData.gridRadios" type="radio" name="gridRadios" id="gridRadios2" value="female">
+        <label class="form-check-label" for="gridRadios2">
+          FEMALE
+        </label>
+      </div>
+      </div>
+   </div>
+   <br/>-->
+   <button (click)="registerUser()" class="btn btn-primary btn-block" type="submit">Sign Up</button>
+</form>
+</div>
